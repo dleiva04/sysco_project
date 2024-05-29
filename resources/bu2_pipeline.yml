@@ -13,7 +13,6 @@ resources:
       libraries:
         - notebook:
             path: ../src/DLT_script.py
-      development: true
       catalog: bu2-${bundle.target}
       photon: true
       channel: CURRENT
