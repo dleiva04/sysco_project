@@ -1,0 +1,20 @@
+bundle:
+  name: sysco
+
+include:
+  - resources/*.yml
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://one-env-sysco-dev.cloud.databricks.com
+
+  prod:
+    mode: production
+    workspace:
+      host: https://one-env-sysco-prd.cloud.databricks.com
+      root_path: /Users/david.leiva@databricks.com/.bundle/${bundle.name}/${bundle.target}
+    run_as:
+      user_name: david.leiva@databricks.com
